@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script lists current directory content, displaying only the part after the first dash.
+
+for file in *; do # Cari qovluqdakı bütün fayllar (gizlilər daxil deyil) üzərində dövr et
+    echo "$file" | cut -d '-' -f 2- # Fayl adını '-' ayrıcıya görə kəs, 2-ci hissədən sona qədər çap et
+done
