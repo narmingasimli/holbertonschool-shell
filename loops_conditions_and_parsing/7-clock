@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# This script displays time from 00:01 to 12:59 using nested while loops.
+
+hour=0 # Saat sayğacını 0-dan başladaq
+
+while [ "$hour" -le 12 ]; do # Saat 0-dan 12-yə qədər davam et
+    echo "Hour: $hour" # Cari saatı çap et
+
+    minute=1 # Hər yeni saat üçün dəqiqə sayğacını 1-dən başladaq
+
+    while [ "$minute" -le 59 ]; do # Dəqiqə 1-dən 59-a qədər davam et
+        echo "$minute" # Cari dəqiqəni çap et
+        minute=$((minute + 1)) # Dəqiqəni artır
+    done
+
+    hour=$((hour + 1)) # Saatı artır
+done
