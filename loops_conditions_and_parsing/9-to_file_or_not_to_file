@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# This script provides information about the 'school' file.
+
+FILE="school" # Yoxlanılacaq faylın adı
+
+if [ -e "$FILE" ]; then # Fayl mövcuddurmu?
+    echo "$FILE file exists"
+
+    if [ -s "$FILE" ]; then # Fayl boş deyilmi? (-s faylın ölçüsü sıfırdan böyükdürsə true qaytarır)
+        echo "$FILE file is not empty"
+    else
+        echo "$FILE file is empty"
+    fi
+
+    if [ -f "$FILE" ]; then # Fayl adi bir fayldırmı?
+        echo "$FILE is a regular file"
+    # else: tapşırıqda heç nə çap etmək tələb olunmur
+    fi
+else
+    echo "$FILE file does not exist"
+fi
