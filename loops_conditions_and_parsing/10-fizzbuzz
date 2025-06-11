@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script displays numbers from 1 to 100, with Fizz, Buzz, or FizzBuzz for multiples.
+
+for i in $(seq 1 100); do # 1-dən 100-ə qədər ədədlər üzərində dövr et
+    if (( i % 3 == 0 && i % 5 == 0 )); then # Həm 3-ə, həm də 5-ə bölünürsə
+        echo "FizzBuzz"
+    elif (( i % 3 == 0 )); then # Yalnız 3-ə bölünürsə
+        echo "Fizz"
+    elif (( i % 5 == 0 )); then # Yalnız 5-ə bölünürsə
+        echo "Buzz"
+    else # Heç birinə bölünmürsə
+        echo "$i" # Ədədin özünü çap et
+    fi
+done
