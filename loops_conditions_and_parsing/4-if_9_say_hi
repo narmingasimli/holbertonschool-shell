@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script displays "Best School" 10 times, with "Hi" on the 9th iteration.
+count=1 # Sayğacı 1-dən başladaq ki, 9-cu iterasiyanı asanlıqla yoxlaya bilək.
+while [ "$count" -le 10 ]; do # 10 və ya daha az olduğu müddətcə davam et
+    echo "Best School"
+    if [ "$count" -eq 9 ]; then
+        echo "Hi"
+    fi
+    count=$((count + 1))
+done
