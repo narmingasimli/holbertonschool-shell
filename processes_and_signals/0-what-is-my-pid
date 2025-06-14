@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
-# This script displays its own Process ID (PID).
+```bash
+#!/bin/bash
+# Bu skript öz Proses İdentifikatorunu (PID) göstərir.
 
 echo $$
